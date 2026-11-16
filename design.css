@@ -1,0 +1,56 @@
+/* Road to 21K — Quiet design system, v4.0 */
+:root{color-scheme:light;--ink:#17191d;--muted:#777b83;--paper:#f6f7f8;--surface:#fff;--line:#e9ebee;--accent:#176c58;--accent-soft:#e9f3ee;--shadow:0 8px 32px rgba(30,40,50,.035);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif!important;color:var(--ink)!important;background:var(--paper)!important;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+body{background:var(--paper)!important;color:var(--ink)!important;min-height:100vh}
+main{max-width:860px!important;padding:34px 22px calc(126px + env(safe-area-inset-bottom))!important}
+header{padding:10px 3px 25px}
+header .pill{font-size:10px!important;letter-spacing:.11em;text-transform:uppercase;background:transparent!important;color:var(--muted)!important;padding:0!important;font-weight:650}
+header h1{font-size:clamp(34px,7vw,49px)!important;letter-spacing:-.055em;font-weight:730!important;margin:9px 0 5px!important;line-height:1.05}
+header h1 .brand-mark{font-weight:350;color:var(--accent)}
+header .muted{font-size:14px;color:var(--muted)!important}
+h1,h2,h3{color:var(--ink);letter-spacing:-.035em}
+h2{font-size:21px!important;font-weight:690!important;line-height:1.18;margin:0 0 17px!important}
+h3{font-size:17px;font-weight:650}
+p{line-height:1.55;margin:10px 0 16px;color:#444a52;font-size:14px}
+.muted,small,.caption{color:var(--muted)!important}
+.card{background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:24px!important;padding:23px!important;margin:12px 0!important;box-shadow:var(--shadow)}
+.card.hero{background:#e9f0ec!important;border-color:#e3ece7!important;padding:27px!important}
+.hero h1{font-size:48px!important;font-weight:730;letter-spacing:-.06em}
+.hero h2{font-size:27px!important;letter-spacing:-.045em}
+.hero .muted{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#597568!important}
+.hero p{color:#476358}
+.pill{background:var(--accent-soft)!important;color:var(--accent)!important;border-radius:100px;padding:5px 11px;font-size:11px;font-weight:650}
+button,.btn{font:inherit;font-size:13px!important;letter-spacing:-.01em;background:#f0f2f3!important;color:#33383d!important;border:1px solid transparent!important;border-radius:12px!important;padding:12px 16px!important;font-weight:650!important;min-height:43px;transition:background .15s,transform .15s;box-shadow:none!important}
+button:hover{background:#e8ebed!important}
+button:active{transform:scale(.985)}
+button.primary,.btn.primary{background:var(--ink)!important;color:#fff!important}
+button.primary:hover{background:#30343a!important}
+button:disabled{opacity:.35;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #83bca6;outline-offset:2px}
+input,select,textarea{background:#f7f8f9!important;border:1px solid #e5e8eb!important;color:var(--ink)!important;border-radius:13px!important;font:inherit;font-size:15px!important;padding:13px!important;width:100%;min-height:45px}
+input[type=checkbox]{width:20px!important;min-height:20px;accent-color:var(--accent)}
+label{color:#5b6068!important;font-size:12px!important;font-weight:650;letter-spacing:.01em;margin:16px 0 7px!important}
+.grid{gap:10px!important}
+.stat{background:#f6f7f8!important;border:1px solid #f0f1f2;border-radius:17px!important;padding:17px!important}
+.stat b{color:var(--ink)!important;font-size:26px!important;font-weight:710;letter-spacing:-.045em}
+.stat small{font-size:11px;display:block;margin-top:5px}
+.session{border-left:0!important;background:#f7f8f9!important;border-radius:16px!important;padding:16px!important;margin:9px 0!important;border:1px solid #f0f1f2}
+.session b{font-size:14px;color:#23272b}
+.session p{margin:7px 0;font-size:13px}
+.row{gap:10px;flex-wrap:wrap}
+.warn{background:#fff8ec;color:#795b2d!important;border:0!important;border-radius:13px;padding:13px 15px!important;font-size:13px}
+table{font-size:13px}td,th{border-bottom:1px solid var(--line)!important;padding:12px 7px!important;color:#41454a}
+nav{position:fixed!important;bottom:0!important;left:0!important;right:0!important;z-index:1000;display:flex!important;justify-content:center!important;gap:4px!important;padding:10px max(10px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-right))!important;background:rgba(255,255,255,.94)!important;border-top:1px solid #ebedef!important;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+nav button{flex:1!important;max-width:130px!important;min-width:0;padding:9px 3px!important;background:transparent!important;border:0!important;color:#838890!important;font-size:11px!important;font-weight:550!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:50px}
+nav button:hover{background:#f5f6f7!important}
+nav button.active{color:var(--accent)!important;background:var(--accent-soft)!important}
+nav button .nav-icon{font-size:20px;line-height:1}
+#roadMenu{order:6}
+#routeMap{border-radius:19px!important;z-index:1}
+.leaflet-container{font-family:inherit!important}
+.leaflet-control-attribution{font-size:9px!important}
+#routeResults .session{background:#f7f9f8!important}
+@media(min-width:700px){main{padding-top:52px!important}.card{padding:29px!important}nav{left:50%!important;right:auto!important;transform:translateX(-50%);width:min(660px,96%);bottom:14px!important;border:1px solid var(--line)!important;border-radius:23px!important;padding:7px!important;box-shadow:0 8px 32px #1c26300d}}
+@media(max-width:380px){main{padding-left:13px!important;padding-right:13px!important}.card{padding:17px!important}nav button{font-size:10px!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
