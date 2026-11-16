@@ -111,3 +111,41 @@ header .pill{display:none!important}
 nav{background:rgba(255,255,255,.96)!important}
 nav button.active{background:#e6eee7!important;color:#245f45!important}
 @media(max-width:470px){.editorial-intro{padding-bottom:25px}.progress-orb{width:104px;height:104px}.progress-orb strong{font-size:31px}.premium-metrics>div{padding:13px;min-height:123px}.premium-metrics{gap:7px}.premium-metrics small{font-size:10px}.premium-timer{grid-template-columns:1fr 1fr}.premium-timer #clock{grid-column:1/-1}.premium-timer button{width:100%}}
+
+/* Premium secondary views */
+.editorial-screen-heading{padding:15px 3px 22px}.editorial-screen-heading .eyebrow{margin-bottom:10px}.editorial-screen-heading h2{font-size:clamp(43px,9vw,65px)!important;line-height:1.02!important;letter-spacing:-.07em!important;margin:0 0 10px!important;font-weight:740!important}.editorial-screen-heading p{color:#899189;margin:0;font-size:14px}
+#view>.editorial-screen-heading+.card{margin-top:0!important}
+#view>.card h2{font-size:21px!important;letter-spacing:-.045em}
+#view>.card select,#view>.card input{background:#f7f8f5!important;border-color:#e6eae3!important}
+#view>.card form{display:block}
+.week-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0 20px}
+.week-summary>div{background:#f5f7f3;border-radius:16px;padding:14px 11px;min-width:0}
+.week-summary span{font-size:9px;letter-spacing:.065em;color:#8a958b;display:block;font-weight:650}
+.week-summary strong{font-size:25px;letter-spacing:-.055em;display:block;margin-top:7px;color:#2a533c}
+.week-summary strong small{font-size:11px;color:#929e93;letter-spacing:0}
+.premium-week-list{display:grid;gap:8px}
+.premium-week-list .premium-day{margin:0!important;border:1px solid #edf0ea!important;background:#fafbf9!important;border-radius:16px!important;padding:14px!important}
+.premium-day>b{display:flex;align-items:center;gap:13px;font-weight:600}
+.day-number{font-size:12px;color:#a4ada4;min-width:20px;font-variant-numeric:tabular-nums}
+.day-copy{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
+.day-name{font-size:11px;color:#8b968d;font-weight:600}
+.day-type{font-size:14px;color:#28372c;font-weight:680}
+.day-min{font-size:12px;color:#316d4a;white-space:nowrap;font-weight:700}
+.premium-day p{font-size:12px!important;color:#929a92!important;margin:9px 0 0 33px!important}
+.premium-day.is-rest{opacity:.65}
+.premium-form-card form>p button,.premium-weight-card form>p button{width:100%;background:#224d37!important;color:white!important;min-height:49px}
+.premium-form-card form>.grid,.premium-weight-card form>.grid{gap:13px}
+.premium-history .history-entry{display:flex;flex-direction:column;gap:2px;background:transparent!important;border:0!important;border-bottom:1px solid #eff0eb!important;border-radius:0!important;padding:14px 0!important;margin:0!important}
+.history-entry b{display:flex;gap:12px;align-items:center;font-size:14px;color:#26352a}
+.history-index{font-size:11px;color:#9ca69d;font-weight:500}
+.history-entry p{margin:4px 0 4px 28px;font-size:12px}
+.history-entry small{margin-left:28px}
+.premium-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important}
+.premium-stats-grid .stat{min-height:140px;border:1px solid #e7ece5!important;background:#f9faf7!important;border-radius:18px!important;padding:18px!important;display:flex;flex-direction:column;justify-content:flex-end}
+.premium-stats-grid .stat b{font-size:clamp(27px,6vw,42px)!important;color:#254f36!important;letter-spacing:-.065em}
+.premium-stats-grid .stat small{margin-top:7px;font-size:12px}
+.premium-chart-card canvas{background:#fafbf9;border-radius:17px;padding:10px}
+.premium-settings-0,.premium-settings-1,.premium-settings-2{position:relative}
+.premium-settings-0:before,.premium-settings-1:before,.premium-settings-2:before{content:"";display:block;width:30px;height:3px;background:#28694e;border-radius:10px;margin-bottom:17px}
+.premium-settings-1 button{background:#244f38!important;color:#fff!important}
+@media(max-width:420px){.week-summary>div{padding:12px 8px}.week-summary strong{font-size:21px}.week-summary span{font-size:8px}.premium-day>b{gap:8px}.premium-day p{margin-left:27px!important}}
