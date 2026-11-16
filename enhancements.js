@@ -47,5 +47,13 @@ const pages={coach,treadmill,gps:gpsPage,library,huawei,reminders,sync:syncPage}
 window.road21={menu:menuPage,open:id=>{if(pages[id])pages[id]();scrollTo(0,0)},plan:advancedPlan,complete:completeSession,changeWeek,gpsStart,gpsStop,exportRoute,treadmill,askNotification,testNotification,calendar,backup:backupAll,restore:restoreAll,meters,readiness,weekNumber};
 const oldPlan=plan;plan=function(){advancedPlan(weekNumber())};
 const oldHome=home;home=function(){oldHome();let b=el().querySelector('.hero');if(b)b.insertAdjacentHTML('beforeend','<p><button onclick="road21.open(\'coach\')">Apri coach personale</button> <button onclick="road21.menu()">Altri strumenti</button></p>')};
+
+/* Elapsed-time guide: compensates for timer throttling when the tab is backgrounded. */
+let guideAnchor=0;
+function guideRefresh(){const s=schedule(guideWeek)[selectedGuide],step=s.steps[guideIndex];if(!step)return;guideSeconds=Math.max(0,Math.floor((Date.now()-guideAnchor)/1000));const clock=document.getElementById('guideClock');if(clock)clock.textContent=formatClock(guideSeconds)+' / '+formatClock(step.min*60);if(guideSeconds>=step.min*60){clearInterval(guideTimer);guideTimer=null;if(navigator.vibrate)navigator.vibrate([100,100,100]);if(guideIndex+1<s.steps.length){guideIndex++;guideSeconds=0;guided();say('Fase successiva: '+s.steps[guideIndex].name)}else{guideSeconds=step.min*60;guided();say('Seduta terminata. Registra come ti senti.');alert('Seduta completata. Puoi registrarla nel diario.')}}}
+guideToggle=function(){const s=schedule(guideWeek)[selectedGuide],step=s.steps[guideIndex];if(!step)return;if(guideTimer){clearInterval(guideTimer);guideTimer=null;guided();return}guideAnchor=Date.now()-guideSeconds*1000;say('Fase: '+step.name+'. '+step.detail);guideTimer=setInterval(guideRefresh,500);guided()};
+guideNext=function(){if(guideTimer){clearInterval(guideTimer);guideTimer=null}const s=schedule(guideWeek)[selectedGuide];if(guideIndex+1>=s.steps.length){say('Seduta terminata.');alert('Ultima fase conclusa. Registra la seduta nel diario.');return}guideIndex++;guideSeconds=0;guided();say('Fase successiva: '+s.steps[guideIndex].name)};
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&guideTimer)guideRefresh()});
+
 menu();
 })();
