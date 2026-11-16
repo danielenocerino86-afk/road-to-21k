@@ -151,3 +151,51 @@ nav button.active{background:#e6eee7!important;color:#245f45!important}
 @media(max-width:420px){.week-summary>div{padding:12px 8px}.week-summary strong{font-size:21px}.week-summary span{font-size:8px}.premium-day>b{gap:8px}.premium-day p{margin-left:27px!important}}
 
 .premium-route-results .session{background:#f7f9f5!important;border:1px solid #e8ede6!important;border-radius:18px!important;padding:16px!important}.premium-route-results .session b{color:#284a35;font-size:15px}.premium-route-results .session p{font-size:12px;margin:5px 0}.premium-route-detail #routeMap{border-radius:19px!important;background:#e7eee8!important}.premium-route-detail>p>b{font-size:25px;letter-spacing:-.045em;color:#254f36}.premium-route-detail button.primary{background:#244f38!important;color:white!important}
+
+/* Mobile QA pass — compact Android phones, large text, safe areas */
+body{overflow-x:hidden}
+main,#view,.card,.premium-overview{min-width:0}
+.card,.session,.editorial-intro,.premium-metrics>div{overflow-wrap:anywhere}
+button,input,select,textarea{max-width:100%}
+#view .grid>*{min-width:0}
+#view canvas{display:block;max-width:100%;height:auto}
+#routeMap{width:100%!important;max-width:100%;min-height:280px;overflow:hidden}
+#routeDetail,#routeResults{min-width:0}
+nav{overscroll-behavior:contain}
+nav button{touch-action:manipulation}
+nav button .nav-icon{display:block;min-height:21px}
+.premium-week-list .premium-day{overflow:hidden}
+.premium-week-list .day-copy{min-width:0}
+.premium-week-list .day-type{overflow-wrap:anywhere}
+.premium-session .row{position:relative;z-index:2}
+@media(max-width:600px){
+ main{padding:21px 16px calc(112px + env(safe-area-inset-bottom))!important}
+ header{padding-bottom:12px}
+ .editorial-intro{gap:8px}
+ .editorial-intro h2{font-size:clamp(38px,10.7vw,57px)!important}
+ .editorial-intro p{font-size:12px}
+ .progress-orb{width:95px;height:95px}
+ .premium-metrics strong{font-size:clamp(24px,7vw,34px)}
+ .card.hero.premium-session{padding:23px!important}
+ .premium-session h2{font-size:clamp(26px,7.6vw,36px)!important}
+ .premium-session h1{font-size:45px!important}
+ nav{gap:1px!important}
+ nav button{min-height:55px!important;line-height:1.15;padding:8px 2px!important;font-size:10px!important}
+ nav button .nav-icon{font-size:21px}
+ .row{align-items:stretch}
+}
+@media(max-width:350px){
+ main{padding-left:11px!important;padding-right:11px!important}
+ .card{padding:16px!important}
+ .editorial-intro h2{font-size:37px!important}
+ .progress-orb{width:79px;height:79px}
+ .premium-metrics>div{padding:11px;min-height:113px}
+ .premium-metrics strong{font-size:23px}
+ .premium-metrics small{font-size:9px}
+ .nav-metrics strong{font-size:14px}
+}
+@media(prefers-contrast:more){
+ .card,.premium-metrics>div{border-color:#b5bdb4!important}
+ .muted,small,.caption{color:#535e55!important}
+ button:focus-visible{outline:3px solid #176c58}
+}
