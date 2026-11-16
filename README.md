@@ -50,3 +50,9 @@ Test automatici: sintassi JavaScript, rendering logico schermate, 26 settimane, 
 - Il dislivello è una stima da punti campionati e non una misura certificata. Il punteggio geometrico **non** classifica la sicurezza di strade, piste ciclabili o marciapiedi.
 - La classificazione OSM dettagliata delle infrastrutture, la navigazione GPS in background e la sincronizzazione cloud **non sono ancora implementate**. Richiedono ulteriori integrazioni e test sul dispositivo.
 - Test eseguiti: sintassi JS, caricamento logico moduli, viste principali, 26 settimane e scoring geometrico. Restano da verificare rendering visivo su browser reali, routing e API altimetrica in produzione.
+
+## Premium dashboard edition
+- `premium-home.js`: dashboard editoriale con anello settimana 1–26, metriche dal diario e scheda allenamento principale.
+- `design.css`: palette bianco caldo/verde bosco, gerarchia tipografica e componenti responsive.
+- `navigation.js`: avvisi di perdita del segnale GPS e sospensione potenziale in background; nessuna garanzia di tracciamento a schermo spento.
+- Verifiche: sintassi JS, esecuzione dashboard simulata, integrità del programma 26 settimane e cache. Non sono stati eseguiti screenshot reali né test GPS su Android.
