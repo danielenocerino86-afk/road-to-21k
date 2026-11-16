@@ -42,3 +42,11 @@ Controlli automatici su sintassi JavaScript, generazione di 26 settimane e sette
 - I preferiti non sono ancora inclusi nel backup completo. Navigazione e GPS possono fermarsi a schermo spento. Nessun avviso di svolta garantito.
 
 Test automatici: sintassi JavaScript, rendering logico schermate, 26 settimane, 4 alternative geometriche, distanza punto-segmento e presenza dei controlli. Test su strada, routing live e comportamento Android ancora da eseguire.
+
+## Design 4.0 — Light / Quiet
+- Nuovo design system in `design.css`: superfici chiare, tipografia di sistema, pulsanti sobri, layout responsive e riduzione del movimento.
+- Navigazione inferiore con stato attivo e attributo `aria-current` in `polish.js`.
+- Modulo `intelligence.js`: compatibilità geometrica (non sicurezza), stima delle sovrapposizioni del percorso e campionamento altimetrico tramite Open-Meteo, con gestione dell'indisponibilità dei dati.
+- Il dislivello è una stima da punti campionati e non una misura certificata. Il punteggio geometrico **non** classifica la sicurezza di strade, piste ciclabili o marciapiedi.
+- La classificazione OSM dettagliata delle infrastrutture, la navigazione GPS in background e la sincronizzazione cloud **non sono ancora implementate**. Richiedono ulteriori integrazioni e test sul dispositivo.
+- Test eseguiti: sintassi JS, caricamento logico moduli, viste principali, 26 settimane e scoring geometrico. Restano da verificare rendering visivo su browser reali, routing e API altimetrica in produzione.
