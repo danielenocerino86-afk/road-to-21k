@@ -149,3 +149,5 @@ nav button.active{background:#e6eee7!important;color:#245f45!important}
 .premium-settings-0:before,.premium-settings-1:before,.premium-settings-2:before{content:"";display:block;width:30px;height:3px;background:#28694e;border-radius:10px;margin-bottom:17px}
 .premium-settings-1 button{background:#244f38!important;color:#fff!important}
 @media(max-width:420px){.week-summary>div{padding:12px 8px}.week-summary strong{font-size:21px}.week-summary span{font-size:8px}.premium-day>b{gap:8px}.premium-day p{margin-left:27px!important}}
+
+.premium-route-results .session{background:#f7f9f5!important;border:1px solid #e8ede6!important;border-radius:18px!important;padding:16px!important}.premium-route-results .session b{color:#284a35;font-size:15px}.premium-route-results .session p{font-size:12px;margin:5px 0}.premium-route-detail #routeMap{border-radius:19px!important;background:#e7eee8!important}.premium-route-detail>p>b{font-size:25px;letter-spacing:-.045em;color:#254f36}.premium-route-detail button.primary{background:#244f38!important;color:white!important}
