@@ -54,3 +54,5 @@ nav button .nav-icon{font-size:20px;line-height:1}
 @media(min-width:700px){main{padding-top:52px!important}.card{padding:29px!important}nav{left:50%!important;right:auto!important;transform:translateX(-50%);width:min(660px,96%);bottom:14px!important;border:1px solid var(--line)!important;border-radius:23px!important;padding:7px!important;box-shadow:0 8px 32px #1c26300d}}
 @media(max-width:380px){main{padding-left:13px!important;padding-right:13px!important}.card{padding:17px!important}nav button{font-size:10px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+#routeMap{background:#e9eeeb!important;color:#64736c;padding:0}#routeIntelligence{background:#f5f8f6!important;border-color:#e6eee9!important}#routeIntelligence h3{margin:0 0 8px}#routeIntelligence p{margin:7px 0}nav button.active .nav-icon{color:#176c58}
