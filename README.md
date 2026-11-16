@@ -1,15 +1,34 @@
-# Road to 21K
+# Road to 21K — v2.0
 
-Web app PWA per Android, con piano di camminata di 26 settimane, timer, diario allenamenti e peso, statistiche e backup locali.
+PWA offline-first per allenamento progressivo: camminata, tapis roulant, esercizi di forza e attività outdoor. Installazione tramite GitHub Pages: https://danielenocerino86-afk.github.io/road-to-21k/
 
-## Installazione
-Pubblicare la root del repository su GitHub Pages, aprire il sito HTTPS in Chrome Android e scegliere Installa app/Aggiungi a schermata Home.
+## Funzioni
+- Piano di 26 settimane, sessioni guidate e timer con tempo trascorso reale
+- Check-in fatica, dolore, respiro e recupero; suggerimenti prudenti basati su regole
+- Ripetizione manuale delle settimane, giorni completati
+- Modalità tapis roulant con velocità personalizzabile
+- Biblioteca di sei esercizi con schemi SVG e istruzioni
+- GPS outdoor in primo piano, cronologia ed esportazione GPX
+- Statistiche di durata, distanza, peso e riepilogo settimanale
+- CSV compatibile per importazione dati da fonti esterne, inclusi CSV Huawei convertiti
+- Backup JSON completo con trasferimento manuale tra dispositivi
+- Notifiche di prova, promemoria tramite calendario ICS
 
-## Privacy
-Il diario resta nel localStorage del dispositivo. GitHub contiene solo il codice. Fare backup JSON regolari.
+## Limitazioni esplicite
+- **Non è disponibile la sincronizzazione diretta Huawei Health**: servono CSV compatibili, eventualmente convertiti. Le esportazioni native ZIP/JSON possono richiedere un adattatore dedicato.
+- **Non esiste un backend cloud né sincronizzazione automatica**: backup e ripristino sono manuali.
+- **Il coach non è un modello AI generativo**: è un motore locale di suggerimenti basati su regole. Non fornisce diagnosi.
+- **GPS e timer**: i browser mobili possono sospendere processi e sensori in background. Non è garantito il tracciamento con schermo spento.
+- **Notifiche**: senza backend push non sono disponibili promemoria automatici a browser chiuso. L'ICS consente di importarli nel calendario.
+- **Privacy**: dati di salute, peso e percorsi rimangono nel browser locale; backup JSON e GPX sono sensibili e vanno conservati privatamente. Non caricarli sul repository pubblico.
+- **Sicurezza**: la corsa non è obbligatoria. Valutazione medica prima di introdurla, soprattutto in presenza di sedentarietà o fattori di rischio. Interrompere l'esercizio in caso di dolore toracico, capogiri, affanno anomalo o dolore che altera il passo.
 
-## Huawei Watch GT 2
-Nessuna sincronizzazione diretta Huawei Health nella v1. Supportato CSV standard con intestazioni date,type,min,km,hr,rpe,note. Eventuali esportazioni Huawei richiedono conversione.
+## Architettura
+- `index.html`: app e diario originale
+- `enhancements.js`: estensioni v2.0
+- `manifest.webmanifest`: installazione PWA
+- `sw.js`: cache offline
+- `icon.svg`: icona
 
-## Sicurezza
-La progressione è indicativa. Per persone molto sedentarie o con fattori di rischio, ottenere valutazione medica prima di iniziare. Non è prevista corsa obbligatoria; il mezzo-maratona è un obiettivo di lungo periodo.
+## Verifiche effettuate
+Controlli automatici su sintassi JavaScript, generazione di 26 settimane e sette giorni per settimana, rendering logico delle schermate Extra e inclusione del modulo nella cache offline. **Non costituiscono un collaudo completo su Samsung, Huawei Watch GT 2, GPS reale o GitHub Pages**.
