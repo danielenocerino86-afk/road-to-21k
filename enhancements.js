@@ -55,5 +55,11 @@ guideToggle=function(){const s=schedule(guideWeek)[selectedGuide],step=s.steps[g
 guideNext=function(){if(guideTimer){clearInterval(guideTimer);guideTimer=null}const s=schedule(guideWeek)[selectedGuide];if(guideIndex+1>=s.steps.length){say('Seduta terminata.');alert('Ultima fase conclusa. Registra la seduta nel diario.');return}guideIndex++;guideSeconds=0;guided();say('Fase successiva: '+s.steps[guideIndex].name)};
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&guideTimer)guideRefresh()});
 
+
+/* Today's route suggestion: connect training schedule to distance-based route planning. */
+const homeWithCoach=home;
+home=function(){homeWithCoach();let w=weekNumber(),day=(new Date().getDay()+6)%7,s=schedule(w)[day];if(!s||!s.min)return;let speed=Math.max(1,Math.min(8,+db.speed||3.5)),km=Math.max(.5,Math.round(s.min*speed/60*2)/2);let hero=el().querySelector('.hero');if(hero)hero.insertAdjacentHTML('beforeend','<div class="session"><b>Percorso suggerito per oggi</b><p>Circa '+km.toFixed(1)+' km, stimati da '+s.min+' minuti al tuo passo impostato ('+speed.toFixed(1)+' km/h). Non è una distanza obbligatoria.</p><button onclick="road21.openRoutes('+km+')">Trova un anello adatto</button></div>')};
+window.road21.openRoutes=function(km){if(!window.roadRoutes)return alert('Pianificatore non disponibile');window.roadRoutes.page();let input=document.getElementById('routeKm');if(input)input.value=km};
+
 menu();
 })();
