@@ -32,3 +32,13 @@ PWA offline-first per allenamento progressivo: camminata, tapis roulant, eserciz
 
 ## Verifiche effettuate
 Controlli automatici su sintassi JavaScript, generazione di 26 settimane e sette giorni per settimana, rendering logico delle schermate Extra e inclusione del modulo nella cache offline. **Non costituiscono un collaudo completo su Samsung, Huawei Watch GT 2, GPS reale o GitHub Pages**.
+
+## Smart Routes 3.0
+- Suggerimento distanza per la seduta di oggi, basato sulla velocità personale e sui minuti programmati.
+- Ricerca di itinerari ad anello/andata-ritorno con routing pedonale esterno (richiede rete e posizione condivisa con il servizio).
+- Mappa interattiva OpenStreetMap con anteprima del tracciato (Leaflet via CDN, richiede rete).
+- Percorsi preferiti locali, esportazione GPX e avviso sperimentale di uscita dal tracciato quando il GPS è sufficientemente preciso.
+- Il motore può preferire marciapiedi e camminamenti, ma **non certifica piste ciclabili, pendenze, illuminazione, accessibilità o sicurezza del percorso**.
+- I preferiti non sono ancora inclusi nel backup completo. Navigazione e GPS possono fermarsi a schermo spento. Nessun avviso di svolta garantito.
+
+Test automatici: sintassi JavaScript, rendering logico schermate, 26 settimane, 4 alternative geometriche, distanza punto-segmento e presenza dei controlli. Test su strada, routing live e comportamento Android ancora da eseguire.
