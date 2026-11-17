@@ -19,7 +19,7 @@ function start(restored){if(watch!==null)return;let route=restored?{name:restore
 function stop(clearDraft=true){if(!clearDraft)persistDraft();if(watch!==null&&navigator.geolocation)navigator.geolocation.clearWatch(watch);watch=null;if(clockId){clearInterval(clockId);clockId=null}if(started)elapsed+=(Date.now()-started)/1000;started=0;if(marker){marker.remove();marker=null}if(trail){trail.remove();trail=null}sessionRoute=null;if(clearDraft)discardDraft();let status=document.getElementById('navAccuracy');if(status)status.textContent='Navigazione interrotta.'}
 function recenter(){let map=window.roadRoutes._map;if(map&&lastFix)map.setView([lastFix.lat,lastFix.lon],Math.max(map.getZoom(),16));follow=true}
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&watch!==null){let x=document.getElementById('navAccuracy');if(x)x.textContent='App in background: Android potrebbe sospendere il GPS. Non affidarti alla continuità del tracciamento.'}});
-window.roadNavigation={start,stop,recenter,progress,meters,snapshot,getDraft,discardDraft,persistDraft,restore(){let draft=getDraft();if(!draft)return false;start(draft);return true},get active(){return watch!==null}};
+window.roadNavigation={start,stop,recenter,progress,meters,snapshot,getDraft,discardDraft,persistDraft,restore(draft){draft=draft||getDraft();if(!draft)return false;start(draft);return true},get active(){return watch!==null}};
 window.addEventListener('pagehide',()=>{if(watch!==null)persistDraft()});
 window.roadRoutes.startNavigation=start;window.roadRoutes.stopNavigation=stop;
 })();
