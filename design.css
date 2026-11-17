@@ -235,3 +235,42 @@ nav button .nav-icon{display:block;min-height:21px}
 .studio-footnote{margin:15px 0 0!important;font-size:11px;color:#89978b!important}
 @media(max-width:470px){.studio-actions{gap:8px}.studio-action{padding:14px!important;gap:9px;min-height:109px!important}.studio-action-icon{width:30px;height:30px;font-size:18px;border-radius:10px}.studio-action strong{font-size:13px}.studio-action small{font-size:10px}.studio-trend{padding:20px 16px 14px}.studio-bars{gap:8px}.studio-trend h3{font-size:18px!important}.studio-live{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.studio-action,.studio-bar-fill{transition:none}}
+
+/* Immersive workout / maps — Experience 01 */
+.experience-active{position:relative}
+.experience-workout{background:linear-gradient(160deg,#193d2c,#10281e)!important;border:0!important;color:#f4faf4!important;padding:28px!important;box-shadow:0 22px 54px #183e2b2b!important}
+.experience-workout>button{background:#ffffff1b!important;color:#e5f4e8!important;border:1px solid #ffffff25!important;margin-bottom:23px}
+.experience-workout>h2{font-size:clamp(30px,7vw,45px)!important;letter-spacing:-.06em!important;color:white!important}
+.experience-workout>p,.experience-workout .muted{color:#c5d7c9!important}
+.experience-workout .experience-phase{border:1px solid #ffffff20!important;background:#ffffff0d!important;border-radius:24px!important;padding:24px 17px!important;margin:22px 0!important;text-align:center}
+.experience-head{display:flex;justify-content:space-between;gap:10px;color:#a9c9b4;font-size:10px;letter-spacing:.1em;font-weight:700;margin-bottom:16px}
+.experience-phase>small{display:none}
+.experience-phase h2{color:#fff!important;font-size:26px!important;letter-spacing:-.05em!important;margin-bottom:8px!important}
+.experience-phase p{color:#c5d8c9!important}
+.experience-ring{--progress:0%;height:225px;width:225px;max-width:100%;margin:26px auto 22px;border-radius:50%;background:conic-gradient(#b5ebbb var(--progress),#ffffff1c 0);display:grid;place-items:center;position:relative}
+.experience-ring:before{content:"";position:absolute;inset:9px;background:#1c3c2d;border-radius:50%}
+.experience-ring #guideClock{position:relative;z-index:1;color:#fff!important;font-size:clamp(26px,6vw,36px)!important;font-variant-numeric:tabular-nums;letter-spacing:-.055em!important;white-space:nowrap;margin:0!important}
+.experience-progress{height:5px;background:#ffffff23;border-radius:30px;overflow:hidden;margin:0 0 13px}
+.experience-progress span{display:block;height:100%;background:#b5ebbb;border-radius:30px}
+.experience-hint{font-size:12px!important;color:#bed5c3!important;margin:0 0 20px!important}
+.experience-phase button{min-height:48px;margin:4px!important}
+.experience-phase .experience-start{background:#d7f0d9!important;color:#19422b!important}
+.experience-phase .experience-next{background:#ffffff18!important;color:#fff!important;border:1px solid #ffffff25!important}
+.experience-plan-control{background:#f1f5ef!important;border:1px solid #dfe8dc!important}
+.experience-plan-control>h2{font-size:27px!important;letter-spacing:-.06em!important}
+.experience-plan-day{border:1px solid #e8ece5!important;transition:transform .15s ease}
+.experience-plan-day .row{gap:14px;align-items:center}
+.experience-plan-day .row>div{min-width:0;flex:1}
+.experience-plan-day .row b{font-size:16px;color:#294a34}
+.experience-plan-day .row p{font-size:12px;color:#849186;margin:7px 0}
+.experience-plan-launch{background:#275b40!important;color:#fff!important;white-space:nowrap}
+.experience-plan-check{display:flex!important;align-items:center;gap:8px;margin-top:14px!important;font-size:12px;color:#768879}
+.experience-plan-check input{accent-color:#28694e;width:19px!important;height:19px!important}
+.experience-routes .experience-route-head{padding-bottom:12px}
+.experience-route-card{padding:16px!important}
+.experience-route-map{height:min(58vh,500px)!important;min-height:320px!important;border-radius:20px!important}
+.experience-route-card h2{font-size:27px!important;letter-spacing:-.055em!important;margin:10px 4px 16px!important}
+.experience-route-card>p{margin:13px 3px!important}
+.experience-route-card button{min-height:43px;margin:3px!important}
+@media(max-width:470px){.experience-workout{padding:19px!important}.experience-ring{height:198px;width:198px}.experience-phase button{width:100%;margin:5px 0!important}.experience-plan-day .row{align-items:flex-start}.experience-plan-launch{padding:10px!important;font-size:11px}.experience-route-map{min-height:290px!important}}
+@media(prefers-reduced-motion:reduce){.experience-plan-day{transition:none}}
