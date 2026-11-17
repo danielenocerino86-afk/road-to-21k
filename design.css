@@ -274,3 +274,17 @@ nav button .nav-icon{display:block;min-height:21px}
 .experience-route-card button{min-height:43px;margin:3px!important}
 @media(max-width:470px){.experience-workout{padding:19px!important}.experience-ring{height:198px;width:198px}.experience-phase button{width:100%;margin:5px 0!important}.experience-plan-day .row{align-items:flex-start}.experience-plan-launch{padding:10px!important;font-size:11px}.experience-route-map{min-height:290px!important}}
 @media(prefers-reduced-motion:reduce){.experience-plan-day{transition:none}}
+
+/* Private journey archive and recovery */
+.journey-tools{display:flex;gap:9px;margin:0 0 18px}
+.journey-tools button{flex:1;background:#e5eee5!important;color:#24543b!important;border:1px solid #d9e6d9!important}
+.journey-tools button:disabled{opacity:.4;cursor:not-allowed}
+.journey-card{padding:22px!important}
+.journey-top{display:flex;justify-content:space-between;gap:10px;color:#879487;font-size:11px;letter-spacing:.03em}
+.journey-card h2{font-size:24px!important;margin:12px 0 20px!important}
+.journey-stats{display:flex;gap:25px;margin-bottom:15px}
+.journey-stats strong{font-size:29px;color:#2a684a;letter-spacing:-.06em}
+.journey-stats small{font-size:11px;color:#8b958b;letter-spacing:0;font-weight:500}
+.journey-card>button{background:#f6f1ef!important;color:#9a4b43!important}
+.journey-finish{display:block;width:100%;margin:13px 0!important;min-height:49px;background:#244e37!important;color:#fff!important}
+@media(max-width:390px){.journey-tools{flex-direction:column}.journey-stats{gap:15px}.journey-stats strong{font-size:25px}}
