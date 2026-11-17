@@ -288,3 +288,5 @@ nav button .nav-icon{display:block;min-height:21px}
 .journey-card>button{background:#f6f1ef!important;color:#9a4b43!important}
 .journey-finish{display:block;width:100%;margin:13px 0!important;min-height:49px;background:#244e37!important;color:#fff!important}
 @media(max-width:390px){.journey-tools{flex-direction:column}.journey-stats{gap:15px}.journey-stats strong{font-size:25px}}
+
+.journey-sparkmap{display:block;width:100%;height:auto;max-height:170px;background:linear-gradient(145deg,#f4f8f3,#eaf2e9);border-radius:17px;margin:12px 0 18px;padding:12px}.journey-map-empty{padding:24px;text-align:center;color:#8c998d;background:#f5f8f4;border-radius:17px;margin:14px 0}
